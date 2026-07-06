@@ -1,0 +1,78 @@
+*{
+     margin: 0;
+     padding: 0;        
+     box-sizing: border-box;    /* no scroll bar vertically and horizontally */
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;   /*  100 vh = 100% of the screen's height */
+    background-color: rebeccapurple;
+    padding: 10px;
+}
+
+.container .todo_app{
+    background-color: white;
+    width: 100%;        /* Stays exactly 600px wide. */
+    max-width: 500px;   /* Stops growing at 600px wide. */
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.container .todo_app .header{
+    display: flex;
+    align-items: center;
+}
+
+.container .todo_app .header h3{
+    color: rebeccapurple;
+    margin: 10px;
+}
+
+.container .todo_app .header img{
+    width: 30px;
+    height: 30px;
+}
+
+.container .todo_app .textbox{
+    display: flex;
+}
+
+.container .todo_app .textbox input{
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.container .todo_app .textbox .addbtn{
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    background-color: rebeccapurple;
+    border-radius: 20px;
+    color: white;
+}
+
+.container .todo_app .list_value li{
+    list-style: none;
+    padding: 12px 8px 12px 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.container .todo_app .list_value .checkbox_style{
+    /* appearance: none; */
+    width: 20px;
+    height: 20px;
+    /* position: relative; */
+    margin-right: 12px;
+    /* border-radius: 100%; */
+    border: 1px solid black;
+    accent-color: rebeccapurple;
+}
+
+.container .todo_app .list_value ul li:has(input:checked){
+    text-decoration : line-through;
+}
